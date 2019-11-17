@@ -16,3 +16,8 @@ Dungeons & Dragons Initiative Tracker
 - отображение номера текущего раунда
 - отображение сколько времени занимает текущий раунд и ход текущего персонажа
 - подсчёт статистики (сколько времени занимает в среднем раунд, сколько времени занимает в среднем ход каждого персонажа) и её отображение в конце боя
+
+Анализ требований
+-----------------
+
+![Use case diagram for 'Dungeons & Dragons Initiative Tracker'](http://www.plantuml.com/plantuml/svg/ZLAzJW914ExtARvG62WuUc8CoZKMMFZp0EFTS4pS7x8xfoJ6TtTEB220iVt-PxEBefIr3zvvNYiq8KktKRIIkL59qSthFdQS8bPKbFCSL52ld1juYfrdZEgh6lTHL4ZbdV6SgNdZFFfqG4ngWjksdRriMrAUFN98fX7bC1gYLXIfO-TWePXECTu3M6x8OgomJ1pEeRYkAembR5DMh7CAM8ld2URWdN9iorystltODFtJP9vBGmyEzrBKrbwazjrBpvHFkNCJJaJdTZmfPSKTgNgszcDWtsbGskBLa9DZZvYgkZ5aapv-4HGbjM9foc2JsFY-vGiT3vOAxNCyR3YOoSPA62u9Oi_qvHQci9_t3G00)
