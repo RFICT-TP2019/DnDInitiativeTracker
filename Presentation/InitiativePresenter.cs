@@ -40,7 +40,7 @@ namespace Presentation
 
         private void NextTurn()
         {
-          _combatService.NextTurn();   
+          _combatService.NextTurn();
         }
 
         private void CombatTimeUpdated()
@@ -52,7 +52,7 @@ namespace Presentation
         {
             if (int.TryParse(_view.TurnDurationLimit, out int limit))
                 _combatService.TurnDurationLimit = TimeSpan.FromSeconds(limit);
-            _view.TurnDurationLimit = _combatService.TurnDurationLimit.ToString();
+            _view.TurnDurationLimit = _combatService.TurnDurationLimit.Seconds.ToString();
 
             _combatService.StartCombat();
             _view.CombatStarted();
@@ -63,6 +63,7 @@ namespace Presentation
         {
             _combatService.StopCombat();
             _view.CombatStopped();
+            ShowInitiative();
 
             var statistics_view = _kernel.Get<IStatisticsView>();
             statistics_view.RoundDurations = _combatService.GetRoundDurations();

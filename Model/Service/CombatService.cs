@@ -98,6 +98,8 @@ namespace Model.Service
 
             _turn_durations = new TimeSpan[_initiative.Length];
             _round_durations.Clear();
+            Round = 0;
+            Turn = 0;
 
             _combat_start = _round_start = _turn_start = DateTime.Now;
             _timer.Start();

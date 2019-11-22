@@ -9,7 +9,7 @@ namespace View
 {
     public partial class InitiativeView : Form, IInitiativeView
     {
-        private bool _combat;
+        private bool _combat; 
         private readonly ApplicationContext _context;
         private string[] _initiative;
         public InitiativeView(ApplicationContext context)
@@ -40,7 +40,7 @@ namespace View
 
         public void ShowInitiative(IEnumerable<string> initiative)
         {
-            _initiative = initiative.ToArray();
+            _initiative = initiative.ToArray();  // backup initiative to operate with it during combat
             lv_Initiative.Items.Clear();
             foreach (var item in _initiative)
             {
@@ -110,7 +110,7 @@ namespace View
 
         private void btn_Left_Click(object sender, EventArgs e)
         {
-            if (_combat) 
+            if (_combat)
                 NextTurn?.Invoke();
             else
                 StartCombat?.Invoke();
