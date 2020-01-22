@@ -63,7 +63,7 @@
             this.lv_Initiative.Size = new System.Drawing.Size(301, 292);
             this.lv_Initiative.TabIndex = 2;
             this.lv_Initiative.UseCompatibleStateImageBehavior = false;
-            this.lv_Initiative.View = System.Windows.Forms.View.List;
+            this.lv_Initiative.View = System.Windows.Forms.View.Details;
             // 
             // btn_Add
             // 

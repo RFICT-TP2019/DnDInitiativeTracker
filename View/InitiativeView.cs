@@ -17,6 +17,11 @@ namespace View
             _context = context;
             InitializeComponent();
             ResetView();
+
+            // set up initiative ListView
+            lv_Initiative.Columns.Add(String.Empty, -2);
+            lv_Initiative.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            lv_Initiative.Scrollable = false;
         }
 
         public new void Show()
@@ -55,7 +60,7 @@ namespace View
             lv_Initiative.Items.Clear();
 
             // Draw Round number
-            lv_Initiative.Items.Add(new ListViewItem { Text = $"Round {round + 1}", ForeColor = Color.Red});
+            lv_Initiative.Items.Add(new ListViewItem { Text = $"Round {round + 1} | Turn {turn + 1} / {_initiative.Length}", ForeColor = Color.Red});
 
             // Current character is marked as Bold
             lv_Initiative.Items.Add(new ListViewItem { Text = _initiative[turn], Font = new Font(lv_Initiative.Font, FontStyle.Bold) });
@@ -63,6 +68,13 @@ namespace View
             // Draw remaining characters
             for (int i = turn + 1; i < _initiative.Length; ++i)
                 lv_Initiative.Items.Add(_initiative[i]);
+
+            // fill empty space by the following turns
+            int empty_rows_count = lv_Initiative.Height / lv_Initiative.Font.Height - lv_Initiative.Items.Count;
+            for (int i = 0; i < empty_rows_count; ++i)
+            {
+                lv_Initiative.Items.Add(_initiative[i % _initiative.Length]);
+            }
         }
 
         public void ShowTime(TimeSpan battle_duration, TimeSpan round_duration, TimeSpan turn_duration)

@@ -43,14 +43,14 @@
             this.tb_CharacterName.Location = new System.Drawing.Point(12, 23);
             this.tb_CharacterName.Name = "tb_CharacterName";
             this.tb_CharacterName.Size = new System.Drawing.Size(125, 28);
-            this.tb_CharacterName.TabIndex = 7;
+            this.tb_CharacterName.TabIndex = 1;
             // 
             // btn_Add
             // 
             this.btn_Add.Location = new System.Drawing.Point(213, 22);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(100, 30);
-            this.btn_Add.TabIndex = 6;
+            this.btn_Add.TabIndex = 3;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -76,7 +76,7 @@
             this.tb_Initiative.Location = new System.Drawing.Point(143, 23);
             this.tb_Initiative.Name = "tb_Initiative";
             this.tb_Initiative.Size = new System.Drawing.Size(64, 28);
-            this.tb_Initiative.TabIndex = 8;
+            this.tb_Initiative.TabIndex = 2;
             // 
             // label1
             // 

@@ -21,7 +21,7 @@ namespace Model.Service
         {
             _repository = repository;
             _timer = timer;
-            _timer.Interval = 110;
+            _timer.Interval = 1000;
             _timer.Tick += TimerTick;
 
             _round_durations = new List<TimeSpan>();
